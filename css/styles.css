@@ -1,232 +1,113 @@
-body {
-  background-image: url(/images/body-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.xl-text {
+  font-size: 75px;
 }
 
-.invitation .container .row {
-  background-image: url(/images/information-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.btn-outline-secondary {
+  color: var(--bs-secondary);
 }
 
-.main-image .col-lg-8 {
-  background-image: url(/images/main.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.btn-outline-secondary:hover {
+  color: #fff;
 }
 
-.timeline-panel {
-  background-image: url(/images/time-line.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.header .decoration-star {
+  top: 80px;
+  left: -200px;
+  width: 500px;
+  opacity: 0.7;
 }
 
-@media (min-width: 992px) and (max-width: 1400px) {
-  a.nav-link {
-    padding: 10px 15px !important;
+.header .decoration-star-2 {
+  top: 80px;
+  right: -200px;
+  width: 500px;
+  opacity: 0.7;
+}
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-sticky {
+  background: #fff;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.details .decoration-star {
+  left: -200px;
+  width: 500px;
+}
+
+.details-2 .decoration-star {
+  right: -200px;
+  width: 500px;
+}
+
+.contact .decoration-star {
+  left: -300px;
+  width: 600px;
+}
+
+.to-top-btn {
+  position: fixed;
+  z-index: 20;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: #44434a;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.to-top-btn:hover {
+  background-color: #1d1d21;
+}
+
+.to-top-btn img {
+  margin-bottom: 0.25rem;
+  width: 18px;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .xl-text {
+    font-size: 50px;
   }
-  a.navbar-brand img {
-    margin-right: 0px !important;
-    width: 150px !important;
+  .btn-outline-secondary {
+    margin-top: 20px;
   }
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
+  .header {
+    margin-top: 0 !important;
+    text-align: center;
   }
-}
-.rainbow {
-  position: relative;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 2rem;
-  font-weight: bold;
-}
-.rainbow::before {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  left: -50%;
-  top: -50%;
-  width: 200%;
-  height: 200%;
-  background-color: #A6FE21;
-  background-repeat: no-repeat;
-  background-size: 50% 50%, 50% 50%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(#A6FE21, #A6FE21), linear-gradient(#000, #000), linear-gradient(#A6FE21, #A6FE21), linear-gradient(#000, #000);
-  animation: rotate 5s linear infinite;
-}
-.rainbow::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 2px;
-  top: 2px;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  background-image: linear-gradient(rgba(166, 254, 33, 0.1137254902), rgba(166, 254, 33, 0.1764705882)), linear-gradient(#000, #000), linear-gradient(#A6FE21, #A6FE21), linear-gradient(#000, #000);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 25px;
-}
-
-.custom-shadow {
-  box-shadow: 0px 0px 20px 0.5px #A6FE21 !important;
-}
-
-.timeline {
-  list-style: none;
-  padding: 20px 0 20px;
-  position: relative;
-}
-
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #A6FE21;
-  left: 50%;
-  margin-left: -1.5px;
-}
-
-.timeline > li {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li > .timeline-panel {
-  width: 46%;
-  float: left;
-  padding: 20px;
-  position: relative;
-}
-
-.timeline > li > .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-
-.timeline > li > .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  content: "";
-}
-
-.timeline > li > .timeline-badge {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 1.4em;
-  text-align: center;
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  margin-left: -10px;
-  background-color: #A6FE21;
-  z-index: 100;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
-  margin-bottom: 0;
-}
-
-.timeline-body > p + p {
-  margin-top: 5px;
-}
-
-@media only screen and (max-width: 767px) {
-  .timeline:before {
-    left: 15px;
-    margin-left: 0;
+  .header .decoration-star {
+    left: -100px;
+    width: 250px;
   }
-  .timeline > li > .timeline-panel {
-    width: calc(100% - 30px);
-    float: right;
+  .header .decoration-star-2 {
+    right: -100px;
+    width: 250px;
   }
-  .timeline > li > .timeline-badge {
-    left: 16px;
+  .header .image-container {
+    margin-top: 30px;
   }
-  .timeline > li > .timeline-panel:before,
-  .timeline > li > .timeline-panel:after {
-    right: auto;
-    left: 100%;
-    margin-left: -15px;
+  .services .col-md-4 {
+    border-bottom: 1px #ccc solid;
+    margin: 10px 0;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    float: right;
+  .details-2 {
+    margin-top: 20px !important;
   }
-  .timeline > li.timeline-inverted > .timeline-panel:before,
-  .timeline > li.timeline-inverted > .timeline-panel:after {
-    left: auto;
-    right: 100%;
-    margin-right: -15px;
+  .details-2 .decoration-star {
+    top: 300px;
   }
 }
